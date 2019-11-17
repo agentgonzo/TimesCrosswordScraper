@@ -136,12 +136,12 @@ if __name__ == '__main__':
         print ("Crossword types: ")
         for t in crossword_types:
             print(t + ": " + crossword_types[t])
-        crossword_type = raw_input("Which Crossword Type?")
+        crossword_type = raw_input("Which Crossword Type? ")
 
     if True:  # get start date from flags
-        start = raw_input("Start Date (dd/mm/yyyy")
+        start = raw_input("Start Date (dd/mm/yyyy) ")
     if True:  # get end date from flags
-        end = raw_input("End Date (dd/mm/yyyy")
+        end = raw_input("End Date (dd/mm/yyyy) ")
     # if not to_print:
     #     to_print = raw_input("Print downloaded crosswords?")
     to_print = False  # get this from user input
