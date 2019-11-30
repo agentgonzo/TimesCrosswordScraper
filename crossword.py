@@ -1,12 +1,11 @@
 import os
 import pickle
-import urllib
 from getpass import getpass
 
-# import requests
-# import yaml
-# from bs4 import BeautifulSoup
-# from enum import Enum
+import requests
+import yaml
+from bs4 import BeautifulSoup
+
 
 class CrosswordFetcher:
     SESSION_FILE = '.sessionfile'
@@ -20,7 +19,7 @@ class CrosswordFetcher:
     def load_credentials(self):
         try:
             with open(self.CONFIG_FILE, 'r') as configfile:
-                self.cookies = yaml.load(configfile)
+                self.cookies = yaml.load(configfile, Loader=yaml.FullLoader)
         except IOError:
             # No config file - create one
             # Warning - password is stored unencrypted.
